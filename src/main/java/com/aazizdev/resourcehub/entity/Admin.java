@@ -13,7 +13,26 @@ public class Admin {
     @Column(name = "Admin_id")
     private UUID adminId;
 
-    @OneToOne
+
     @Column(name = "user_id")
     private UUID user;
+
+    public Admin(){
+
+    }
+
+    public void setAdminId(UUID adminId){
+        this.adminId = adminId;
+    }
+    public UUID getAdminId()
+    {
+       return adminId;
+    }
+
+    public void setUser(UUID user){
+        this.user = user;
+    }
+    public UUID getUser(){
+        return user;
+    }
 }
